@@ -650,7 +650,7 @@
 </symbols>
 <devicesets>
 <deviceset name="MOLEX_15_BOARD">
-<description>PCB Board that Accepts .093" Male Pins in place of Molex Connectore.  JEEP ECU Interface</description>
+<description>PCB Board Layout that Accepts .063" Molex Male Tail Pins PN 02-09-2134 .  Tale is .063" and pin is .096"</description>
 <gates>
 <gate name="G$1" symbol="M15" x="0" y="0"/>
 </gates>
@@ -2188,7 +2188,10 @@ part number 2062-2P from STA</description>
 </class>
 </classes>
 <parts>
-<part name="U$1" library="Eberle" deviceset="MOLEX_15_BOARD" device=""/>
+<part name="U$1" library="Eberle" deviceset="MOLEX_15_BOARD" device="">
+<attribute name="MFG" value="Molex"/>
+<attribute name="PN" value="03-09-2151 / 02-09-2134 "/>
+</part>
 <part name="CPS6" library="Eberle" deviceset="CAP" device="0606-CAP" value="0.1u">
 <attribute name="MFG" value="Vishay"/>
 <attribute name="PN" value="VJ0603Y104JXJCW1BC"/>
@@ -2298,10 +2301,14 @@ part number 2062-2P from STA</description>
 <attribute name="PN" value="C0603C105K4RACTU"/>
 <attribute name="VDC" value="16"/>
 </part>
-<part name="U$2" library="Eberle" deviceset="17395XX78" device="173950578"/>
+<part name="UPS1" library="Eberle" deviceset="17395XX78" device="173950578">
+<attribute name="MFG" value="Wurth"/>
+<attribute name="PN" value="173950578"/>
+</part>
 <part name="C3" library="Eberle" deviceset="CAP_POLTH1_JE" device="8X10MM-SMD" value="330u">
 <attribute name="MFG" value="Nichicon"/>
 <attribute name="PN" value="UCL1E331MNL1GS"/>
+<attribute name="VDC" value="25"/>
 </part>
 <part name="TP_12V" library="Eberle" deviceset="TEST_POINT" device=""/>
 <part name="TP_DATA" library="Eberle" deviceset="TEST_POINT" device=""/>
@@ -2319,7 +2326,7 @@ part number 2062-2P from STA</description>
 <sheets>
 <sheet>
 <plain>
-<text x="-116.84" y="195.58" size="1.778" layer="91">V2 Changes
+<text x="12.7" y="147.32" size="1.778" layer="91">V2 Changes
 - 470u Input CAP
 - TP on transistor Output
 - Remove TI Switcher and chenge to Wurth Module
@@ -2327,7 +2334,10 @@ part number 2062-2P from STA</description>
 - Change Pin/Pad Dimesnions for Molex Connector from .096" to .062"</text>
 </plain>
 <instances>
-<instance part="U$1" gate="G$1" x="2.54" y="25.4"/>
+<instance part="U$1" gate="G$1" x="2.54" y="25.4">
+<attribute name="MFG" x="2.54" y="25.4" size="1.778" layer="96" display="off"/>
+<attribute name="PN" x="2.54" y="25.4" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="CPS6" gate="G$1" x="195.58" y="91.44" smashed="yes">
 <attribute name="NAME" x="198.12" y="90.17" size="1.778" layer="95"/>
 <attribute name="VALUE" x="198.12" y="87.63" size="1.778" layer="96"/>
@@ -2442,10 +2452,14 @@ part number 2062-2P from STA</description>
 <attribute name="PN" x="276.86" y="127" size="1.778" layer="96" display="off"/>
 <attribute name="VDC" x="276.86" y="127" size="1.778" layer="96" display="off"/>
 </instance>
-<instance part="U$2" gate="G$1" x="144.78" y="99.06"/>
+<instance part="UPS1" gate="G$1" x="144.78" y="99.06">
+<attribute name="MFG" x="144.78" y="99.06" size="1.778" layer="96" display="off"/>
+<attribute name="PN" x="144.78" y="99.06" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="C3" gate="G$1" x="106.68" y="93.98">
 <attribute name="MFG" x="106.68" y="93.98" size="1.778" layer="96" display="off"/>
 <attribute name="PN" x="106.68" y="93.98" size="1.778" layer="96" display="off"/>
+<attribute name="VDC" x="106.68" y="93.98" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="TP_12V" gate="G$1" x="83.82" y="116.84" rot="R90">
 <attribute name="MFG" x="83.82" y="116.84" size="1.778" layer="96" rot="R90" display="off"/>
@@ -2535,7 +2549,7 @@ part number 2062-2P from STA</description>
 <pinref part="TP_GND" gate="G$1" pin="1"/>
 <wire x1="195.58" y1="78.74" x2="218.44" y2="78.74" width="0.1524" layer="91"/>
 <junction x="195.58" y="78.74"/>
-<pinref part="U$2" gate="G$1" pin="GND/ADJ"/>
+<pinref part="UPS1" gate="G$1" pin="GND/ADJ"/>
 <wire x1="144.78" y1="91.44" x2="144.78" y2="78.74" width="0.1524" layer="91"/>
 <junction x="144.78" y="78.74"/>
 <pinref part="C3" gate="G$1" pin="-"/>
@@ -2660,7 +2674,7 @@ part number 2062-2P from STA</description>
 <wire x1="88.9" y1="96.52" x2="88.9" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="DPS3" gate="G$1" pin="C"/>
 <pinref part="DPS4" gate="G$1" pin="C"/>
-<pinref part="U$2" gate="G$1" pin="VI"/>
+<pinref part="UPS1" gate="G$1" pin="VI"/>
 <pinref part="C3" gate="G$1" pin="+"/>
 <wire x1="134.62" y1="99.06" x2="106.68" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="99.06" x2="106.68" y2="96.52" width="0.1524" layer="91"/>
@@ -2696,7 +2710,7 @@ part number 2062-2P from STA</description>
 <pinref part="TP_5V0" gate="G$1" pin="1"/>
 <wire x1="180.34" y1="106.68" x2="180.34" y2="99.06" width="0.1524" layer="91"/>
 <junction x="180.34" y="99.06"/>
-<pinref part="U$2" gate="G$1" pin="VO"/>
+<pinref part="UPS1" gate="G$1" pin="VO"/>
 </segment>
 <segment>
 <pinref part="R13" gate="G$1" pin="2"/>

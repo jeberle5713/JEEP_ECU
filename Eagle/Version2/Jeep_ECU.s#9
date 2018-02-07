@@ -413,17 +413,17 @@
 <package name="8X10MM-ELECTROLYTIC">
 <smd name="-" x="0" y="0" dx="3.2" dy="3.2" layer="1"/>
 <smd name="+" x="0" y="6.4" dx="3.2" dy="3.2" layer="1"/>
-<circle x="0" y="3.2" radius="4.15" width="0.127" layer="51"/>
-<wire x1="-4" y1="6.4" x2="-4" y2="2" width="0.127" layer="51"/>
+<circle x="0" y="3.2" radius="4.15" width="0.127" layer="21"/>
+<wire x1="-4" y1="6.4" x2="-4" y2="2" width="0.127" layer="21"/>
 <wire x1="-4" y1="2" x2="-4" y2="-0.8" width="0.127" layer="51"/>
-<wire x1="-4" y1="-0.8" x2="4" y2="-0.8" width="0.127" layer="51"/>
-<wire x1="4" y1="-0.8" x2="4" y2="2" width="0.127" layer="51"/>
-<wire x1="4" y1="2" x2="4" y2="6.4" width="0.127" layer="51"/>
-<wire x1="4" y1="6.4" x2="2.8" y2="7.6" width="0.127" layer="51"/>
-<wire x1="2.8" y1="7.6" x2="-2.8" y2="7.6" width="0.127" layer="51"/>
-<wire x1="-2.8" y1="7.6" x2="-4" y2="6.4" width="0.127" layer="51"/>
-<wire x1="-4" y1="2" x2="4" y2="2" width="0.127" layer="51"/>
-<text x="-2.54" y="8.89" size="1.27" layer="21">&gt;Value</text>
+<wire x1="-4" y1="-0.8" x2="4" y2="-0.8" width="0.127" layer="21"/>
+<wire x1="4" y1="-0.8" x2="4" y2="2" width="0.127" layer="21"/>
+<wire x1="4" y1="2" x2="4" y2="6.4" width="0.127" layer="21"/>
+<wire x1="4" y1="6.4" x2="2.8" y2="7.6" width="0.127" layer="21"/>
+<wire x1="2.8" y1="7.6" x2="-2.8" y2="7.6" width="0.127" layer="21"/>
+<wire x1="-2.8" y1="7.6" x2="-4" y2="6.4" width="0.127" layer="21"/>
+<wire x1="-4" y1="2" x2="4" y2="2" width="0.127" layer="21"/>
+<text x="-1.27" y="8.89" size="0.6096" layer="21">&gt;Name</text>
 </package>
 <package name="EIA-6032">
 <wire x1="3.2" y1="-1.6" x2="3.2" y2="1.6" width="0.127" layer="21"/>
@@ -4031,7 +4031,7 @@ part number 2062-2P from STA</description>
 <attribute name="VDC" value="16"/>
 </part>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="J1" library="SparkFun-Connectors" deviceset="CONN_02" device="">
+<part name="JDEBUG" library="SparkFun-Connectors" deviceset="CONN_02" device="">
 <attribute name="MFG" value="3M"/>
 <attribute name="PN" value="929870-01-02-RA"/>
 </part>
@@ -4047,13 +4047,8 @@ part number 2062-2P from STA</description>
 <attribute name="PN" value="C0603C105K4RACTU"/>
 <attribute name="VDC" value="16"/>
 </part>
-<part name="C1X" library="Eberle" deviceset="CAP" device="0606-CAP" value="0.1u">
-<attribute name="MFG" value="Vishay"/>
-<attribute name="PN" value="VJ0603Y104JXJCW1BC"/>
-<attribute name="VDC" value="16"/>
-</part>
 <part name="U$2" library="Eberle" deviceset="17395XX78" device="173950578"/>
-<part name="U$3" library="Eberle" deviceset="CAP_POLTH1_JE" device="8X10MM-SMD" value="330u">
+<part name="C3" library="Eberle" deviceset="CAP_POLTH1_JE" device="8X10MM-SMD" value="330u">
 <attribute name="MFG" value="Nichicon"/>
 <attribute name="PN" value="UCL1E331MNL1GS"/>
 </part>
@@ -4169,7 +4164,7 @@ part number 2062-2P from STA</description>
 <attribute name="VDC" x="129.54" y="0" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="GND5" gate="1" x="129.54" y="-12.7"/>
-<instance part="J1" gate="G$1" x="160.02" y="63.5" rot="R180">
+<instance part="JDEBUG" gate="G$1" x="160.02" y="63.5" rot="R180">
 <attribute name="MFG" x="160.02" y="63.5" size="1.778" layer="96" rot="R180" display="off"/>
 <attribute name="PN" x="160.02" y="63.5" size="1.778" layer="96" rot="R180" display="off"/>
 </instance>
@@ -4185,15 +4180,8 @@ part number 2062-2P from STA</description>
 <attribute name="PN" x="276.86" y="127" size="1.778" layer="96" display="off"/>
 <attribute name="VDC" x="276.86" y="127" size="1.778" layer="96" display="off"/>
 </instance>
-<instance part="C1X" gate="G$1" x="213.36" y="22.86" smashed="yes">
-<attribute name="NAME" x="215.9" y="21.59" size="1.778" layer="95"/>
-<attribute name="VALUE" x="215.9" y="19.05" size="1.778" layer="96"/>
-<attribute name="MFG" x="213.36" y="22.86" size="1.778" layer="96" display="off"/>
-<attribute name="PN" x="213.36" y="22.86" size="1.778" layer="96" display="off"/>
-<attribute name="VDC" x="213.36" y="22.86" size="1.778" layer="96" display="off"/>
-</instance>
 <instance part="U$2" gate="G$1" x="144.78" y="99.06"/>
-<instance part="U$3" gate="G$1" x="106.68" y="93.98">
+<instance part="C3" gate="G$1" x="106.68" y="93.98">
 <attribute name="MFG" x="106.68" y="93.98" size="1.778" layer="96" display="off"/>
 <attribute name="PN" x="106.68" y="93.98" size="1.778" layer="96" display="off"/>
 </instance>
@@ -4276,7 +4264,7 @@ part number 2062-2P from STA</description>
 <pinref part="U$2" gate="G$1" pin="GND/ADJ"/>
 <wire x1="144.78" y1="91.44" x2="144.78" y2="78.74" width="0.1524" layer="91"/>
 <junction x="144.78" y="78.74"/>
-<pinref part="U$3" gate="G$1" pin="-"/>
+<pinref part="C3" gate="G$1" pin="-"/>
 <wire x1="106.68" y1="88.9" x2="106.68" y2="78.74" width="0.1524" layer="91"/>
 <junction x="106.68" y="78.74"/>
 <pinref part="DPS3" gate="G$1" pin="A"/>
@@ -4315,10 +4303,6 @@ part number 2062-2P from STA</description>
 <wire x1="226.06" y1="15.24" x2="220.98" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="226.06" y1="12.7" x2="226.06" y2="15.24" width="0.1524" layer="91"/>
 <junction x="226.06" y="15.24"/>
-<pinref part="C1X" gate="G$1" pin="2"/>
-<wire x1="213.36" y1="17.78" x2="213.36" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="213.36" y1="15.24" x2="220.98" y2="15.24" width="0.1524" layer="91"/>
-<junction x="220.98" y="15.24"/>
 </segment>
 <segment>
 <pinref part="C20" gate="G$1" pin="2"/>
@@ -4326,7 +4310,7 @@ part number 2062-2P from STA</description>
 <pinref part="GND5" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="2"/>
+<pinref part="JDEBUG" gate="G$1" pin="2"/>
 <pinref part="GND9" gate="1" pin="GND"/>
 <wire x1="152.4" y1="60.96" x2="149.86" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="60.96" x2="149.86" y2="58.42" width="0.1524" layer="91"/>
@@ -4400,7 +4384,7 @@ part number 2062-2P from STA</description>
 <pinref part="DPS3" gate="G$1" pin="C"/>
 <pinref part="DPS4" gate="G$1" pin="C"/>
 <pinref part="U$2" gate="G$1" pin="VI"/>
-<pinref part="U$3" gate="G$1" pin="+"/>
+<pinref part="C3" gate="G$1" pin="+"/>
 <wire x1="134.62" y1="99.06" x2="106.68" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="99.06" x2="106.68" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="-15.24" y1="109.22" x2="43.18" y2="109.22" width="0.1524" layer="91"/>
@@ -4408,6 +4392,8 @@ part number 2062-2P from STA</description>
 <wire x1="106.68" y1="109.22" x2="106.68" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="TP_12V" gate="G$1" pin="1"/>
 <wire x1="43.18" y1="116.84" x2="43.18" y2="109.22" width="0.1524" layer="91"/>
+<junction x="106.68" y="99.06"/>
+<junction x="43.18" y="109.22"/>
 </segment>
 </net>
 <net name="N$35" class="0">
@@ -4473,7 +4459,7 @@ part number 2062-2P from STA</description>
 <label x="124.46" y="43.18" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="1"/>
+<pinref part="JDEBUG" gate="G$1" pin="1"/>
 <wire x1="152.4" y1="63.5" x2="137.16" y2="63.5" width="0.1524" layer="91"/>
 <label x="137.16" y="63.5" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -4508,10 +4494,7 @@ part number 2062-2P from STA</description>
 <wire x1="220.98" y1="30.48" x2="226.06" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="R10" gate="G$1" pin="1"/>
 <junction x="220.98" y="30.48"/>
-<pinref part="C1X" gate="G$1" pin="1"/>
 <wire x1="213.36" y1="30.48" x2="220.98" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="213.36" y1="25.4" x2="213.36" y2="30.48" width="0.1524" layer="91"/>
-<junction x="213.36" y="30.48"/>
 </segment>
 </net>
 </nets>
